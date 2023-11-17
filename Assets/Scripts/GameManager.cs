@@ -14,8 +14,16 @@ public class GameManager : MonoBehaviour
 
     public float worldSpeed = 2;
     public Text scoreText;
+    public Text coinText;
     public GameObject gameOverPanel;
     float score;
+    int coins;
+
+    private void Start()
+    {
+        coins = PlayerPrefs.GetInt("Coins");
+        coinText.text = coins.ToString();
+    }
 
     private void Update()
     {
@@ -33,5 +41,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+    }
+
+    public void CoinCollected()
+    {
+        coins++;
+        coinText.text = coins.ToString();
+        PlayerPrefs.SetInt("Coins", coins);
     }
 }
