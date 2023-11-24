@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     {
         coins = PlayerPrefs.GetInt("Coins");
         coinText.text = coins.ToString();
+
+        magnet.magnetActive = false;
     }
 
     private void Update()
@@ -48,5 +50,20 @@ public class GameManager : MonoBehaviour
         coins++;
         coinText.text = coins.ToString();
         PlayerPrefs.SetInt("Coins", coins);
+    }
+
+    public MagnetSO magnet;
+    public void MagnetCollected()
+    {
+        if(magnet.magnetActive)
+        {
+            CancelInvoke(nameof(DeactivateMagnet));
+        }
+        magnet.magnetActive = true;
+        Invoke(nameof(DeactivateMagnet), magnet.magnetDuration);
+    }
+    void DeactivateMagnet()
+    {
+        magnet.magnetActive = false;
     }
 }

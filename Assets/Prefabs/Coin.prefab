@@ -114,3 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3989e4a1cea025f4089b46ca22fa1e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveSpeed: 1
+  waveDistance: 0.5
+  atractionSpeed: 25
