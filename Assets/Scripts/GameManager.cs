@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (battery.active) return;
+
         Time.timeScale = 0;
         gameOverPanel.SetActive(true);
     }
@@ -65,5 +67,25 @@ public class GameManager : MonoBehaviour
     void DeactivateMagnet()
     {
         magnet.magnetActive = false;
+    }
+
+    public BatterySO battery;
+    public void BatteryCollected()
+    {
+        if (battery.active)
+        {
+            CancelInvoke(nameof(CancelBattery));
+        }
+        else
+        {
+            worldSpeed += battery.speedBoost;
+        }
+        battery.active = true;
+        Invoke(nameof(CancelBattery), battery.duration);
+    }
+    void CancelBattery()
+    {
+        battery.active = false;
+        worldSpeed -= battery.speedBoost;
     }
 }
