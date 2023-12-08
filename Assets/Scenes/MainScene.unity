@@ -1331,8 +1331,7 @@ MonoBehaviour:
   scoreText: {fileID: 1567565086}
   coinText: {fileID: 1963466553}
   gameOverPanel: {fileID: 1670483316}
-  magnet: {fileID: 11400000, guid: 7c2701d183fa69c47a5ba848a3c2e6fe, type: 2}
-  battery: {fileID: 11400000, guid: 6566644e1266cc640a23ceabd17b2ea2, type: 2}
+  powerupManager: {fileID: 11400000, guid: b57b9ca838bcc9f428aaad014e4d20e3, type: 2}
 --- !u!4 &1353923805
 Transform:
   m_ObjectHideFlags: 0

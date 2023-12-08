@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
     float score;
     int coins;
 
+    public PowerupManager powerupManager;
+    BatterySO battery => powerupManager.Battery;
+    public MagnetSO magnet => powerupManager.Magnet;
+
     private void Start()
     {
         coins = PlayerPrefs.GetInt("Coins");
@@ -54,7 +58,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Coins", coins);
     }
 
-    public MagnetSO magnet;
     public void MagnetCollected()
     {
         if(magnet.magnetActive)
@@ -69,7 +72,6 @@ public class GameManager : MonoBehaviour
         magnet.magnetActive = false;
     }
 
-    public BatterySO battery;
     public void BatteryCollected()
     {
         if (battery.active)
