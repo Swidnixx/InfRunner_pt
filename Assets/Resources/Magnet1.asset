@@ -15,3 +15,6 @@ MonoBehaviour:
   magnetActive: 0
   magnetDistance: 2.5
   magnetDuration: 5
+  level: 1
+  upgradeCost: 4
+  upgraded: {fileID: 11400000, guid: 1f08063fd3aec3b4286cde311f5c6bc3, type: 2}

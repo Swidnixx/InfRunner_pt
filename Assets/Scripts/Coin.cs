@@ -56,6 +56,7 @@ public class Coin : MonoBehaviour
         {
             Destroy(gameObject);
             GameManager.Instance.CoinCollected();
+            SoundManager.Instance.PlayCoinSfx();
         }
     }
 }

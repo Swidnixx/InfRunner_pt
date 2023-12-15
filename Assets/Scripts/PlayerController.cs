@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
                 //jump
                 Vector2 velocity = new Vector2(0, jumpVel);
                 rb.velocity = velocity;
+                SoundManager.Instance.PlayJumpSfx();
             }
             else if(!doubleJumped)
             {
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
                 //jump
                 Vector2 velocity = new Vector2(0, jumpVel);
                 rb.velocity = velocity;
+                SoundManager.Instance.PlayJumpSfx();
             }
         }
     }

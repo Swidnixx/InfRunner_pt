@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6739506a4c1450439c7a5ab0c070a59, type: 3}
-  m_Name: PowerupManager
+  m_Script: {fileID: 11500000, guid: f2b4cd6d5061b9843949ea0ee8e35d11, type: 3}
+  m_Name: Magnet2
   m_EditorClassIdentifier: 
-  _battery: {fileID: 11400000, guid: 6566644e1266cc640a23ceabd17b2ea2, type: 2}
-  _magnet: {fileID: 11400000, guid: 7c2701d183fa69c47a5ba848a3c2e6fe, type: 2}
+  magnetActive: 0
+  magnetDistance: 4
+  magnetDuration: 7.5
+  level: 2
+  upgradeCost: 100
+  upgraded: {fileID: 0}
