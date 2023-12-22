@@ -16,5 +16,5 @@ MonoBehaviour:
   duration: 5
   speedBoost: 2.5
   level: 1
-  upgradeCost: 100
+  upgradeCost: 3
   upgraded: {fileID: 11400000, guid: 1cf67891cb6bb5b40bb45a0d2b99f15f, type: 2}

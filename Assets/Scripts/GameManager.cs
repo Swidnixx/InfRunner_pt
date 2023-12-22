@@ -90,4 +90,9 @@ public class GameManager : MonoBehaviour
         battery.active = false;
         worldSpeed -= battery.speedBoost;
     }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
